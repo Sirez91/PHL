@@ -1,0 +1,33 @@
+diff --git a/src/board_engine.c b/src/board_engine.c
+index e5a991e..a80f1ec 100644
+--- a/src/board_engine.c
++++ b/src/board_engine.c
+@@ -322,7 +322,8 @@ delete_alignment_from_board (gpointer alignment_pointer, gpointer user_data)
+     }
+     if (g_do_not_score == FALSE) {
+         gi_total_gems_removed += gi_gems_removed;
+-        //g_print("Score: %d Gems removed: %d\n", i_total_score, gi_gems_removed);
++		//print score
++        g_print("Score: %d Gems removed: %d\n", i_total_score, gi_gems_removed);
+ 		gi_score += i_total_score;
+         //display score
+ 		buffer = g_strdup_printf ("%d", i_total_score);
+@@ -797,13 +798,14 @@ board_engine_loop (gpointer data)
+ 					score.plain = gi_score;
+ 					games_scores_set_category (highscores, "Normal");
+ 					hiscore_rank = games_scores_add_score (highscores, score);
+- 					if (show_hiscores (hiscore_rank, TRUE) == GTK_RESPONSE_REJECT)
+-                        gtk_main_quit ();
+-                    else {
++					// Reset rather than save high score
++ 					//if (show_hiscores (hiscore_rank, TRUE) == GTK_RESPONSE_REJECT)
++                    //    gtk_main_quit ();
++                    //else {
+                         sge_destroy_all_objects ();
+ 	                    gweled_draw_board ();
+ 	                    gweled_start_new_game ();
+-                    }
++                    //}
+ 					g_do_not_score = FALSE;
+ 					gi_state = _IDLE;
+ 				}

@@ -1,0 +1,826 @@
+
+void songB() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(489);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 8
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 9
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 10
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 11
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 12
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+ delay(489);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 13
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 14
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 15
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 16
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 17
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 18
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+ delay(489);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 19
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 20
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 21
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 22
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 23
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+ delay(489);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 24
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 25
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_1() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(489);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_2() {
+
+    // note 1
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+ delay(489);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_3() {
+
+    // note 1
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+ delay(489);
+    digitalWrite(motorPin7, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_4() {
+
+    // note 1
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_12() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(489);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 8
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 9
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 10
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 11
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 12
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+ delay(489);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 13
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 14
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songB_34() {
+
+    // note 1
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+ delay(489);
+    digitalWrite(motorPin7, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 8
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 9
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 10
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 11
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+}
+
+
+void songA() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+ delay(489);
+    digitalWrite(motorPin4, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 8
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 9
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 10
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 11
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 12
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+ delay(489);
+    digitalWrite(motorPin12, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 13
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 14
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 15
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 17
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(489);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 19
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 21
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    digitalWrite(motorPin7, LOW);
+}
+
+
+void songA_1() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+}
+
+
+void songA_2() {
+
+    // note 1
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+}
+
+
+void songA_3() {
+
+    // note 1
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+ delay(489);
+    digitalWrite(motorPin2, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+}
+
+
+void songA_4() {
+
+    // note 1
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    digitalWrite(motorPin7, LOW);
+}
+
+
+void songA_12() {
+
+    // note 1
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+ delay(489);
+    digitalWrite(motorPin4, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+    delay(869);
+    digitalWrite(motorPin2, LOW);
+    // note 8
+    delay(48);
+    digitalWrite(motorPin4, HIGH);
+    delay(869);
+    digitalWrite(motorPin4, LOW);
+}
+
+
+void songA_34() {
+
+    // note 1
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 2
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 3
+    delay(48);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin3, LOW);
+    // note 4
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    // note 5
+    delay(48);
+    digitalWrite(motorPin2, HIGH);
+ delay(489);
+    digitalWrite(motorPin2, LOW);
+    if (con) {
+        digitalWrite(motorPin10, HIGH);
+        delay(400);
+        digitalWrite(motorPin10, LOW);
+ } else {
+        delay(400);
+}
+    // note 6
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    // note 7
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 9
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(869);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    // note 11
+    delay(48);
+    digitalWrite(motorPin7, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    delay(489);
+    digitalWrite(motorPin7, LOW);
+    digitalWrite(motorPin3, LOW);
+    if (con) {
+        digitalWrite(motorPin8, HIGH);
+        delay(400);
+        digitalWrite(motorPin8, LOW);
+ } else {
+        delay(400);
+}
+    // note 13
+    delay(48);
+    digitalWrite(motorPin12, HIGH);
+    digitalWrite(motorPin7, HIGH);
+    delay(869);
+    digitalWrite(motorPin12, LOW);
+    digitalWrite(motorPin7, LOW);
+}
+

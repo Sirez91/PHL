@@ -1,0 +1,4 @@
+flask-retention/.idea
+flask-retention/__pycache__
+flask-retention/venv
+init-scripts/venv

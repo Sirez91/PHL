@@ -1,0 +1,70 @@
+diff --git a/src/main.c b/src/main.c
+index f8534b9..82805de 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -411,7 +411,9 @@ int main (int argc, char **argv)
+ 	gtk_window_set_resizable (GTK_WINDOW (g_main_window), FALSE);
+ 	gtk_widget_show (g_main_window);
+ 
+-    welcome_screen_visibility(TRUE);
++	prefs.game_mode = ENDLESS_MODE;
++    //welcome_screen_visibility(TRUE);
++	welcome_screen_visibility(FALSE);
+ 
+     gtk_widget_set_size_request (g_drawing_area,
+                                  BOARD_WIDTH * prefs.tile_size,
+@@ -450,28 +452,33 @@ int main (int argc, char **argv)
+ 			      BOARD_WIDTH * prefs.tile_size,
+ 			      BOARD_HEIGHT * prefs.tile_size);
+ 
+-    // check for previous saved game
+-    filename = g_strconcat(g_get_user_config_dir(), "/gweled.saved-game", NULL);
+-
+-	if(g_file_test(filename, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR)) {
+-	    box = gtk_message_dialog_new (GTK_WINDOW (g_main_window),
+-                          GTK_DIALOG_DESTROY_WITH_PARENT,
+-                          GTK_MESSAGE_QUESTION,
+-                          GTK_BUTTONS_YES_NO,
+-                          _("There is a game saved, do you want restore it?"));
+-
+-        gtk_dialog_set_default_response (GTK_DIALOG (box),
+-                         GTK_RESPONSE_NO);
+-        response = gtk_dialog_run (GTK_DIALOG (box));
+-        gtk_widget_destroy (box);
+-
+-        if (response == GTK_RESPONSE_YES)
+-            load_previous_game();
+-        else
+-            unlink(filename);
+-	}
++	gweled_draw_board ();
++	gweled_start_new_game ();
++	respawn_board_engine_loop();
++	gtk_widget_set_sensitive(g_menu_pause, TRUE);
+ 
+-	g_free(filename);
++    // check for previous saved game
++//    filename = g_strconcat(g_get_user_config_dir(), "/gweled.saved-game", NULL);
++
++//	if(g_file_test(filename, G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR)) {
++//	    box = gtk_message_dialog_new (GTK_WINDOW (g_main_window),
++//                          GTK_DIALOG_DESTROY_WITH_PARENT,
++//                          GTK_MESSAGE_QUESTION,
++//                          GTK_BUTTONS_YES_NO,
++//                          _("There is a game saved, do you want restore it?"));
++
++//        gtk_dialog_set_default_response (GTK_DIALOG (box),
++//                         GTK_RESPONSE_NO);
++//        response = gtk_dialog_run (GTK_DIALOG (box));
++//        gtk_widget_destroy (box);
++
++//        if (response == GTK_RESPONSE_YES)
++//            load_previous_game();
++//        else
++//            unlink(filename);
++//	}
++
++//	g_free(filename);
+ 
+ 	gtk_main ();
+ 

@@ -11,6 +11,7 @@ import signal
 from helpers.fileChecker import fileExists
 import os
 
+pathPrefix = '/home/marc/Bachelorarbeit/data/'
 id = 0
 condition = ''
 part = 0
@@ -70,9 +71,11 @@ except Exception as e:
     print(e)
     exit()
 
+#get serials for peripherials
 serLed = serial.Serial(ledUSB, 9600)
 serGlove = serial.Serial(gloveUSB, 9600)
 time.sleep(2)
+#send song to peripherilas
 serLed.write(songName_LED.encode())
 serGlove.write(songName.encode())
 time.sleep(1)
@@ -96,10 +99,8 @@ while i < len(song):
         output.note_off(song[i][0], 0, 0)
         i = i+1
 
-path = "~/data/" + str(id) + '/' + condition + '/'
-
 # find a file name to save
-path_file = "/home/teco/data/" + str(id) + '/' + condition + '/'
+path_file = pathPrefix + str(id) + '/' + condition + '/'
 found_file = False
 file_name = part
 i = 0

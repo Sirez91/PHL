@@ -10,6 +10,7 @@ Clean all hard coded strings
 
 ### Usefull Software
 * arecordmidi to capture MIDI events.
+	* Port 24 ist the default port of Teco's Casio Piano 
 ```bash
 	arecordmidi -p 24:0 scale.mid
 ```

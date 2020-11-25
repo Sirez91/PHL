@@ -4,13 +4,18 @@
 
 The following repository is a dump for all the code and work done on the passive haptic learning project.
 
+### SETUP
+pip install pygame
+pip install pyserial
+pip install mido
+
 ### TODO
 
 Clean all hard coded strings
 
 ### Usefull Software
 * arecordmidi to capture MIDI events.
-	* Port 24 ist the default port of Teco's Casio Piano 
+	* Port 24 ist the default port of Teco's Casio Piano, to detect the port use "pmidi -l"
 ```bash
 	arecordmidi -p 24:0 scale.mid
 ```

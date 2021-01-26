@@ -132,8 +132,8 @@ def midiToArrayVer2(mid):
         return notesArray
 
 def compareSongs(originalSong, testedSong):
-    original_song = MidiFile("originalSong")
-    test_song = MidiFile("testedSong")
+    original_song = MidiFile(originalSong)
+    test_song = MidiFile(testedSong)
     test = dtwLists(midiToArrayVer2(original_song), midiToArrayVer1(test_song), dist=dtw)
     return test
 

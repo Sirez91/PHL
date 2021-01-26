@@ -8,6 +8,7 @@ from helpers.songs import getSongPart, getSongs
 id = 0
 condition = ''
 part = 0
+usage = "playSong_pretest.py -i id -c gold/gnew"
 try:
     opts, args = getopt.getopt(sys.argv[1:],"hi:c:p:",["id=","condition=","part="])
 except getopt.GetoptError:
@@ -55,6 +56,9 @@ except Exception as e:
     print(e)
     exit()
 
+if(condition == "gnew") {
+    
+}
 #serGlove = serial.Serial(gloveUSB, 9600)
 #time.sleep(2)
 #serGlove.write(songName.encode())

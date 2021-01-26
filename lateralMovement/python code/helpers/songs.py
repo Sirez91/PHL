@@ -1,3 +1,13 @@
+octaveHighs = [
+    47,
+    59,
+    71,
+    83
+]
+
+
+songPathPrefix = '/home/marc/Bachelorarbeit/PHL/audio/lateral_movement/'
+
 songA = [
     76,
     79,
@@ -86,6 +96,7 @@ songB = [
     67,
     72,
     67,
+
     72,
     77,
     83,
@@ -238,3 +249,57 @@ def extractPart(songName, part):
         elif (part == 34):
             song = fullSongB[14:25]
     return song
+
+def getVibrationMessage(song):
+    i = 0
+    vibration = [];
+    while i < len(song):
+        vibrationAtTheSameTime = [];
+        vibrationAtTheSameTime.append(str(song[i][3]));
+        if i>0:
+            vibrationForOctaveJump = getVibrationForOctaveJump(song[i-1][0], song[i][0]);
+            if vibrationForOctaveJump!='':
+                vibrationAtTheSameTime.append(vibrationForOctaveJump);
+        if i+1 != len(song) and song[i+1][2] == 0:
+            vibrationAtTheSameTime.append(str(song[i+1][3]));
+            vibrationForOctaveJump = getVibrationForOctaveJump(song[i][0], song[i+1][0]);
+            if vibrationForOctaveJump!='':
+                vibrationAtTheSameTime.append(vibrationForOctaveJump);
+            i = i+2
+        else:
+            i = i+1
+        vibration.append(';'.join(vibrationAtTheSameTime));
+    return ','.join(vibration);
+
+def getVibrationForOctaveJump(prevNote, note):
+    if(note == prevNote):
+        return '';
+    if(note > prevNote):
+        returnValue = '7';
+        i = 0;
+        while i < len(octaveHighs):
+            if(note>octaveHighs[i] and prevNote<=octaveHighs[i]):
+                return returnValue;
+            i+=1;
+        return '';
+    else:
+        returnValue = '6';
+        i = 0;
+        while i < len(octaveHighs):
+            if(note<=octaveHighs[i] and prevNote>octaveHighs[i]):
+                return returnValue;
+            i+=1;
+        return '';
+    
+
+def getSongPath(id, condition):
+    if (condition == "gold"):
+        if ((id % 2) == 0):
+            return songPathPrefix+'SongB.mid'
+        else:
+            return songPathPrefix+'SongA.mid'
+    else:
+        if ((id % 2) == 0):
+            return songPathPrefix+'SongA.mid'
+        else:
+            return songPathPrefix+'SongB.mid'

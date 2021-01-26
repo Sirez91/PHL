@@ -3,6 +3,8 @@ import serial
 from helpers.stoppableThread import StoppableThread
 from helpers.usbPorts import gloveUSB, ledUSB
 from pygame import midi
+from helpers.songs import getVibrationMessage
+
 
 class pup(StoppableThread):
     def __init__(self, fullSong, songName, *args, **kwargs):
@@ -24,7 +26,9 @@ class pup(StoppableThread):
         while True:
             if self.stopped():
                 return
-            ser.write(self.songName.encode())
+            
+            vibration_message = getVibrationMessage(self.song);
+            ser.write(vibration_message.encode())
            # serLed = serial.Serial(ledUSB, 9600)
            # time.sleep(2)
            # serLed.write(self.songName.encode())

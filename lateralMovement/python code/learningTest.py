@@ -12,6 +12,7 @@ usage = 'learningTest.py -i <id> -a <attempt> -c <condition>'
 id = 0
 attempt = ""
 condition = ""
+
 try:
     opts, args = getopt.getopt(sys.argv[1:],"hi:a:c:",["id=","attpemt=","condition="])
 except getopt.GetoptError:

@@ -38,3 +38,9 @@ Solution:
 ```bash
 	sudo ln -s /usr/lib/x86_64-linux-gnu/alsa-lib/libasound_module_conf_pulse.so /usr/lib/x86_64-linux-gnu/libasound_module_conf_pulse.so
 ```
+## Install gweled
+* extract the tar.gz file
+* go to the extracted folder
+* follow the instructions of the INSTALL file
+	* before executing make install you have to patch some files
+		* use patch -p1 < [filename].patch  for each of the patchfiles 

@@ -3,7 +3,8 @@ import subprocess
 import signal
 import os
 from helpers.dwt_hard import compareSongs
-from helpers.fileChecker import fileExists
+from helpers.fileChecker import fileExists, existsDirectory, createPath
+from helpers.songs import getSongPath
 
 if (os.system('arecordmidi -l | grep CASIO') != 0):
     print("Piano is not connect")
@@ -14,6 +15,7 @@ id = 0
 attempt = ""
 condition = ""
 session = ''
+pathPrefix = '/home/marc/Bachelorarbeit/data/'
 try:
     opts, args = getopt.getopt(sys.argv[1:],"hi:a:c:s:",["id=","attpemt=","condition=","session="])
 except getopt.GetoptError:
@@ -45,11 +47,14 @@ if (id == 0 and attempt == "" and condition == "" and sessiont == ""):
     print(usage)
     sys.exit()
 
-path = "~/data/" + str(id) + '/' + condition + '/' + session + '/';
+path = pathPrefix + str(id) + '/' + condition + '/' + session + '/';
 #check if file exists
 if(fileExists(path+attempt+".mid")):
     print("file exists")
     sys.exit()
+if(existsDirectory(path) != True):
+    print("dir has to be created")
+    createPath(path)
 
 port = subprocess.Popen("arecordmidi -l |  awk '$2 ~ /CASIO/ {print $1}'", shell=True, stdout=subprocess.PIPE)
 x = subprocess.Popen('arecordmidi -p ' +
@@ -63,6 +68,8 @@ print("Press Enter to Stop Capture")
 input()
 print("Stopping Capture")
 os.killpg(os.getpgid(x.pid), signal.SIGTERM)
-#originalSong="path"
-#justPlayed = path + attempt + ".mid"
-#print(compareSongs(originalSong, justPlayed))
+originalSong = getSongPath(id, condition)
+print(originalSong)
+justPlayed = path + attempt + ".mid"
+print(compareSongs(originalSong, justPlayed))
+

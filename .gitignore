@@ -2,3 +2,5 @@ flask-retention/.idea
 flask-retention/__pycache__
 flask-retention/venv
 init-scripts/venv
+game/gweled-0.9.1
+*.pyc

@@ -4,7 +4,9 @@ import time
 import serial
 import sys
 import getopt
-from helpers.songs import getSongPart, getSongs
+from helpers.led_dictionary import notes_to_led
+from helpers.led_dictionary import encodeLeds
+from helpers.songs import getSongPart, getSongs, getVibrationMessage
 from mido import MidiFile
 import subprocess
 import signal
@@ -58,7 +60,11 @@ print(songName)
 print(song)
 # songName_LED = songName
 songName_LED = songName.split(":")[1]
-# print(songName_LED)
+led_message = encodeLeds(song);
+#for note in song:
+#    leds.append(str(notes_to_led.get(note[0])));
+#led_message = ','.join(leds);
+print(led_message);
 
 KEYDOWN = 144
 KEYUP = 128
@@ -76,8 +82,11 @@ serLed = serial.Serial(ledUSB, 9600)
 serGlove = serial.Serial(gloveUSB, 9600)
 time.sleep(2)
 #send song to peripherilas
-serLed.write(songName_LED.encode())
-serGlove.write(songName.encode())
+#serLed.write(songName_LED.encode())
+serLed.write(led_message.encode())
+vibration_message = getVibrationMessage(song);
+print(vibration_message);
+serGlove.write(vibration_message.encode())
 time.sleep(1)
 notes_list_orig = []
 i = 0

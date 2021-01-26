@@ -24,7 +24,7 @@ class GameController:
 
     def startGame(self, song, songName, id, condition):
         # start game
-        self.x = subprocess.Popen(f'gweled >> ~/data/{id}/{condition}/game.txt',
+        self.x = subprocess.Popen(f'gweled >> ~/Bachelorarbeit/data/{id}/{condition}/game.txt',
                              shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 
         # start vibrations and audio
@@ -36,7 +36,7 @@ class GameController:
         self.y.start()
 
     def killAfterMinutes(self):
-        sleep(30*60)
+        sleep(30)#sleep(30*60)
         self.thread.stop()
         GameController.stop_threads = True
         print("Game Stoped")

@@ -60,7 +60,6 @@ void playSong() {
 void loop() {
   if(Serial.available()){
     input += Serial.readStringUntil('\n');
-    Serial.print(input);
     if( input == "reset"){
       for(int i = 0; i < NUM_LEDS; i++) {
         led_stripe[i] = CRGB(0, 0, 0);

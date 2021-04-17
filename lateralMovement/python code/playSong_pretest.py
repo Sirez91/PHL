@@ -56,9 +56,6 @@ except Exception as e:
     print(e)
     exit()
 
-if(condition == "gnew") {
-    
-}
 #serGlove = serial.Serial(gloveUSB, 9600)
 #time.sleep(2)
 #serGlove.write(songName.encode())

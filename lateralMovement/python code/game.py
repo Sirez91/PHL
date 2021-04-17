@@ -36,7 +36,7 @@ class GameController:
         self.y.start()
 
     def killAfterMinutes(self):
-        sleep(30)#sleep(30*60)
+        sleep(30*60)
         self.thread.stop()
         GameController.stop_threads = True
         print("Game Stoped")

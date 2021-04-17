@@ -77,6 +77,32 @@ except Exception as e:
     print(e)
     exit()
 
+# find a file name to save
+path_file = pathPrefix + str(id) + '/' + condition + '/'
+found_file = False
+file_name = part
+i = 0
+while not found_file:
+    # check if file exists
+    if fileExists(path_file+str(file_name)+".mid"):
+        file_name = str(part) + "_" + str(i)
+        i = i + 1
+    else:
+        found_file = True
+
+#capture keyboard input
+
+port = subprocess.Popen("arecordmidi -l |  awk '$2 ~ /CASIO/ {print $1}'",
+                        shell=True, stdout=subprocess.PIPE)
+x = subprocess.Popen('arecordmidi -p ' +
+                     port.stdout.read().decode("utf-8").rstrip() +
+                     ' ' + path_file +
+                     str(file_name) + ".mid",
+                     shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
+
+print("Started Capture")
+print("Press Enter to Stop Capture")
+
 #get serials for peripherials
 serLed = serial.Serial(ledUSB, 9600)
 serGlove = serial.Serial(gloveUSB, 9600)
@@ -86,7 +112,9 @@ time.sleep(2)
 serLed.write(led_message.encode())
 vibration_message = getVibrationMessage(song);
 print(vibration_message);
-serGlove.write(vibration_message.encode())
+firstpart, secondpart = vibration_message[:len(vibration_message)//2], vibration_message[len(vibration_message)//2:]
+serGlove.write(firstpart.encode())
+serGlove.write((secondpart+'>').encode())
 time.sleep(1)
 notes_list_orig = []
 i = 0
@@ -108,29 +136,8 @@ while i < len(song):
         output.note_off(song[i][0], 0, 0)
         i = i+1
 
-# find a file name to save
-path_file = pathPrefix + str(id) + '/' + condition + '/'
-found_file = False
-file_name = part
-i = 0
-while not found_file:
-    # check if file exists
-    if fileExists(path_file+str(file_name)+".mid"):
-        file_name = str(part) + "_" + str(i)
-        i = i + 1
-    else:
-        found_file = True
 
-port = subprocess.Popen("arecordmidi -l |  awk '$2 ~ /CASIO/ {print $1}'",
-                        shell=True, stdout=subprocess.PIPE)
-x = subprocess.Popen('arecordmidi -p ' +
-                     port.stdout.read().decode("utf-8").rstrip() +
-                     ' ' + path_file +
-                     str(file_name) + ".mid",
-                     shell=True, stdout=subprocess.PIPE, preexec_fn=os.setsid)
 
-print("Started Capture")
-print("Press Enter to Stop Capture")
 input()
 print("Stopping Capture")
 os.killpg(os.getpgid(x.pid), signal.SIGTERM)

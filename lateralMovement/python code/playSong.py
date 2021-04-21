@@ -113,8 +113,9 @@ serLed.write(led_message.encode())
 vibration_message = getVibrationMessage(song);
 print(vibration_message);
 firstpart, secondpart = vibration_message[:len(vibration_message)//2], vibration_message[len(vibration_message)//2:]
-serGlove.write(firstpart.encode())
-serGlove.write((secondpart+'>').encode())
+#serGlove.write(firstpart.encode())
+#serGlove.write((secondpart+'>').encode())
+serGlove.write((vibration_message+'>').encode())
 time.sleep(1)
 notes_list_orig = []
 i = 0

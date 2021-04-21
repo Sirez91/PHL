@@ -51,16 +51,30 @@ int mapToMotor(int finger) {
 void playSong(String input) {
   int ind = input.indexOf(',');  //finds location of first ,
   do {
+    ind = input.indexOf(',');
     String fingers = input.substring(0, ind);
   String remainingFingers = fingers;
   int ind_fingers = -1;
+  int octaveJumpIndex =  fingers.indexOf('#');
+
+  int currentVibrationDuration = vibration_duration;
+  if(octaveJumpIndex > -1) {
+    int motor = mapToMotor(remainingFingers.substring(0, 1).toInt());
+    digitalWrite(motor, HIGH);
+    delay((vibration_duration/2));
+    currentVibrationDuration = vibration_duration - (vibration_duration/2);
+    digitalWrite(motor, LOW);
+    remainingFingers = remainingFingers.substring(2);
+    fingers = remainingFingers;
+  }
+
   do {
     remainingFingers = remainingFingers.substring(ind_fingers+1);
     int motor = mapToMotor(remainingFingers.substring(0, 1).toInt());
     digitalWrite(motor, HIGH);
     ind_fingers = remainingFingers.indexOf(';');
   } while (ind_fingers>0);
-  delay(vibration_duration);
+  delay(currentVibrationDuration);
   remainingFingers = fingers;
   ind_fingers = -1;
   do {
@@ -70,7 +84,6 @@ void playSong(String input) {
     ind_fingers = remainingFingers.indexOf(';');
   } while (ind_fingers>0);
   delay(48);
-    ind = input.indexOf(',');
     input = input.substring(ind+1);
   } while (ind > 0);
 }

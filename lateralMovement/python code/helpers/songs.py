@@ -178,7 +178,7 @@ durationNotesB = [
 
 # key, note duration, time between notes 70
 fingersrsB = [
-    1, 2, 5, 2, 5, 2, 5, 4, 3, 2, 4, 5, 1, 5, 2, 3, 4, 5, 2, 3, 5, 4, 5, 4, 5
+    1, 2, 5, 2, 5, 2, 5, 4, 3, 2, 4, 5, 1, 5, 2, 3, 4, 5, 2, 3, 5, 4, 5, 2, 3
 ]
 
 fullSongB = [list(pair) for pair in zip(songB, durationNotesB, timeBetweenNotesB, fingersrsB)]
@@ -254,21 +254,23 @@ def getVibrationMessage(song):
     i = 0
     vibration = [];
     while i < len(song):
+        vibrationWithOctaveJump = [];
         vibrationAtTheSameTime = [];
         vibrationAtTheSameTime.append(str(song[i][3]));
         if i>0:
             vibrationForOctaveJump = getVibrationForOctaveJump(song[i-1][0], song[i][0]);
             if vibrationForOctaveJump!='':
-                vibrationAtTheSameTime.append(vibrationForOctaveJump);
+                vibrationWithOctaveJump.append(vibrationForOctaveJump);
         if i+1 != len(song) and song[i+1][2] == 0:
             vibrationAtTheSameTime.append(str(song[i+1][3]));
             vibrationForOctaveJump = getVibrationForOctaveJump(song[i][0], song[i+1][0]);
-            if vibrationForOctaveJump!='':
-                vibrationAtTheSameTime.append(vibrationForOctaveJump);
+            if vibrationForOctaveJump!='' and len(vibrationWithOctaveJump) == 0:
+                vibrationWithOctaveJump.append(vibrationForOctaveJump);
             i = i+2
         else:
             i = i+1
-        vibration.append(';'.join(vibrationAtTheSameTime));
+        vibrationWithOctaveJump.append(';'.join(vibrationAtTheSameTime))
+        vibration.append('#'.join(vibrationWithOctaveJump));
     return ','.join(vibration);
 
 def getVibrationForOctaveJump(prevNote, note):

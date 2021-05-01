@@ -4,3 +4,5 @@ flask-retention/venv
 init-scripts/venv
 game/gweled-0.9.1
 *.pyc
+*.csv
+lateralMovement/python code/dataForEvaluation.py

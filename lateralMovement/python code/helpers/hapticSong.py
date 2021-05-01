@@ -28,7 +28,7 @@ class pup(StoppableThread):
                 return
             
             vibration_message = getVibrationMessage(self.song);
-            ser.write(vibration_message.encode())
+            ser.write((vibration_message+">").encode())
            # serLed = serial.Serial(ledUSB, 9600)
            # time.sleep(2)
            # serLed.write(self.songName.encode())

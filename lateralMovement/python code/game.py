@@ -42,8 +42,9 @@ class GameController:
         print("Game Stoped")
         os.killpg(os.getpgid(self.x.pid), signal.SIGTERM)
 
-id = 0
-condition = ''
+id = 11
+
+condition = 'gnew'
 try:
     opts, args = getopt.getopt(sys.argv[1:],"hi:c:",["id=","condition="])
 except getopt.GetoptError:

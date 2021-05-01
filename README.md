@@ -5,9 +5,14 @@
 The following repository is a dump for all the code and work done on the passive haptic learning project.
 
 ### SETUP
+
+## Study
 pip install pygame
 pip install pyserial
 pip install mido
+
+## Evaluation
+pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 ### TODO
 

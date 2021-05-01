@@ -95,12 +95,9 @@ def midiToArrayVer1(mid):
         notesPressed = []
         notesReleased = []
         for msg in track:
-#            print(msg)
             if (msg.type == "note_on" and msg.time != 0):
-                print(msg)
                 notesPressed.append(msg.note)
             if (msg.type == "note_off" and msg.time != 0):
-                print(msg)
                 notesReleased.append(msg.note)
                 if (len(notesPressed) == len(notesReleased)):
                     notesArray.append(notesPressed)
@@ -117,12 +114,9 @@ def midiToArrayVer2(mid):
         notesPressed = []
         notesReleased = []
         for msg in track:
-#            print(msg)
             if (msg.type == "note_on" and msg.velocity > 0):
-                print(msg)
                 notesPressed.append(msg.note)
             if (msg.type == "note_on" and msg.velocity == 0):
-                print(msg)
                 notesReleased.append(msg.note)
                 if (len(notesPressed) == len(notesReleased)):
                     notesArray.append(notesPressed)

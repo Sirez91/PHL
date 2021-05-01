@@ -65,6 +65,7 @@ x = subprocess.Popen('arecordmidi -p ' +
 
 print("Started Capture")
 print("Press Enter to Stop Capture")
+print(path)
 input()
 print("Stopping Capture")
 os.killpg(os.getpgid(x.pid), signal.SIGTERM)
